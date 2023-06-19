@@ -1,0 +1,9 @@
+/* COUNTS OF DIFFERENT WEBSITE ADDRESS USED BY ENTIRE DATA */
+/* ANS IS 3 */
+
+SELECT 
+COUNT(ab.right)
+FROM
+(	SELECT DISTINCT
+	RIGHT(a.website, 3) AS right
+	FROM accounts a) AS ab
